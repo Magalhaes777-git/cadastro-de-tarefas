@@ -3,6 +3,7 @@ const botaoAdicionar = document.getElementById("botao-adicionar");
 const listaTarefas = document.getElementById("lista-tarefa");
 const contadorTarefas = document.getElementById("contador-tarefas");
 const botaoTema = document.getElementById("botao-alternar-tema");
+var decidaSe = 0
 
 let tarefas = [];
 
@@ -12,6 +13,44 @@ function adicionarTarefa() {
     if (texto === "") {
         alert("Digite uma tarefa!");
         return;
+    }
+
+    if (texto === "saber sobre o autor"){
+        document.getElementById("autor").style="display: block"
+
+    }
+
+    if ((texto === "Farmar aura")||(texto === "67")){
+         document.getElementById("someDaquiCricaRanhenta").style="display: solid"
+
+         const tarefasAura = [
+            "Acordar às 5:30",
+            "Tomar banho e se arrumar",
+            "Pegar o busão",
+            "Chegar no trabalho",
+            "Bater carteira",
+            "Trabalhar igual condenado",
+            "Almoçar em 15 minutos",
+            "Voltar a trabalhar",
+            "Olhar para o relógio e perceber que ainda são 14:37",
+            "Continuar trabalhando",
+            "Bater carteira novamente",
+            "Pegar o busão de volta",
+            "Chegar em casa às 21:00",
+            "Tomar banho",
+            "Jantar",
+            "perceber que não tem tempo para farmar aura",
+            "Deitar na cama",
+            "Perceber que amanhã tem tudo isso de novo",
+            "Repetir tudo isso"
+        ];
+
+        tarefasAura.forEach(function(nome) {
+            tarefas.push({
+                nome: nome,
+                concluida: false
+            })
+        })
     }
 
     const tarefa = {
@@ -85,9 +124,21 @@ campoTarefa.addEventListener("keydown", function(event) {
     }
 });
 
+
+const esperar = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+
+async function iniciarPiscaPisca() {
+    while (true) {
+        document.body.classList.toggle("tema-escuro");
+       
+        await esperar(1500); 
+    }
+}
+
 botaoTema.addEventListener("click", function() {
     document.body.classList.toggle("tema-escuro");
-
+    decidaSe = decidaSe + 1;
     const icone = botaoTema.querySelector("i");
 
     if (document.body.classList.contains("tema-escuro")) {
@@ -95,5 +146,16 @@ botaoTema.addEventListener("click", function() {
     } else {
         icone.className = "fa-solid fa-moon";
     }
+
+    if (decidaSe == 12) {
+        document.getElementById("peloAmorDeDeus").style = "display: block"; 
+    }
+    
+    if (decidaSe == 16) {
+        alert("EU PEDI PARA VOCÊ PARAR, AGORA SOFRA COM EPILEPSIA !!!!!!!!!");
+        document.getElementById("peloAmorDeDeus").style = "display: none"; 
+        iniciarPiscaPisca();
+    }
 });
+
 

@@ -206,3 +206,314 @@ acoes-tarefa {
     background: #222;
     color: white;
 }
+#autor,
+#peloAmorDeDeus,
+#someDaquiCricaRanhenta {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--cor-texto);
+    background: var(--fundo-cartao);
+    border: 2px solid var(--cor-borda);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 0.5s ease;
+}
+#autor,
+#peloAmorDeDeus h1,
+#someDaquiCricaRanhenta h1 {
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+#autor,
+#peloAmorDeDeus h3,
+#someDaquiCricaRanhenta h3 {
+    margin-top: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+#someDaquiCricaRanhenta h2 {
+    margin: 20px 0 10px;
+    color: var(--cor-primaria);
+}
+
+#autor img,
+#peloAmorDeDeus img,
+#someDaquiCricaRanhenta img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    object-fit: contain;
+
+    margin: 20px auto;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#auntor img:hover,
+#peloAmorDeDeus img:hover,
+#someDaquiCricaRanhenta img:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+#peloAmorDeDeus {
+    border-color: #ff7675;
+    background: linear-gradient(
+        135deg,
+        var(--fundo-cartao),
+        rgba(255, 118, 117, 0.12)
+    );
+}
+
+#peloAmorDeDeus h1:first-child {
+    color: var(--cor-perigo);
+}
+
+#peloAmorDeDeus h3 {
+    color: var(--cor-texto);
+}
+
+#peloAmorDeDeus h1:last-child {
+    color: var(--cor-perigo);
+    font-size: 1.4rem;
+}
+
+
+#someDaquiCricaRanhenta {
+    border-color: var(--cor-primaria);
+    background: linear-gradient(
+        135deg,
+        var(--fundo-cartao),
+        rgba(108, 92, 231, 0.12)
+    );
+}
+
+#someDaquiCricaRanhenta h1 {
+    color: var(--cor-primaria);
+}
+
+#someDaquiCricaRanhenta h2 {
+    font-size: 1.2rem;
+}
+
+#someDaquiCricaRanhenta h3 {
+    background: var(--cor-borda);
+    padding: 20px;
+    border-radius: 15px;
+    font-style: italic;
+    text-align: left;
+}
+
+
+@media (max-width: 600px) {
+    #autor,
+    #peloAmorDeDeus,
+    #someDaquiCricaRanhenta {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    #peloAmorDeDeus h1,
+    #someDaquiCricaRanhenta h1 {
+        font-size: 1.5rem;
+    }
+
+    #peloAmorDeDeus h3,
+    #someDaquiCricaRanhenta h3 {
+        font-size: 0.95rem;
+    }
+
+    #peloAmorDeDeus img,
+    #someDaquiCricaRanhenta img {
+        max-height: 300px;
+    }
+
+    #autor {
+        width: 100%;
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 35px;
+    
+        background: var(--fundo-cartao);
+        color: var(--cor-texto);
+    
+        border-radius: 20px;
+        border: 2px solid var(--cor-borda);
+    
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    
+        text-align: center;
+    
+        animation: aparecerAutor 0.5s ease;
+    }
+    
+
+    
+    #autor h1 {
+        font-size: 2rem;
+        color: var(--cor-primaria);
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    
+   
+    
+    #autor h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: var(--cor-texto);
+    }
+    
+  
+    
+    #autor img {
+        display: block;
+    
+        width: 100%;
+        max-width: 450px;
+        max-height: 450px;
+    
+        object-fit: contain;
+    
+        margin: 0 auto 25px;
+    
+        border-radius: 18px;
+    
+        border: 3px solid var(--cor-primaria);
+    
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.15);
+    
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+    
+    #autor img:hover {
+        transform: scale(1.03) rotate(-1deg);
+    
+        box-shadow:
+            0 15px 35px rgba(108, 92, 231, 0.3);
+    }
+    
+   
+    
+    #autor h3 {
+        font-size: 1rem;
+        font-weight: 400;
+    
+        line-height: 1.7;
+    
+        text-align: left;
+    
+        margin-top: 20px;
+    
+        background: var(--cor-borda);
+    
+        padding: 25px;
+    
+        border-radius: 15px;
+    
+        border-left: 5px solid var(--cor-primaria);
+    }
+    
+    
+    
+    #autor h3 strong {
+        display: block;
+    
+        margin-top: 20px;
+        margin-bottom: 5px;
+    
+        color: var(--cor-primaria);
+    
+        font-size: 1.1rem;
+    }
+    
+  
+    
+    #autor h3 strong:first-child {
+        margin-top: 0;
+    }
+    
+   
+    
+    #autor h6 {
+        margin-top: 25px;
+    
+        padding: 15px;
+    
+        font-size: 0.8rem;
+        font-weight: 400;
+    
+        color: var(--cor-concluido);
+    
+        background: rgba(108, 92, 231, 0.08);
+    
+        border-radius: 10px;
+    
+        border: 1px dashed var(--cor-primaria);
+    }
+    
+    
+    
+    @keyframes aparecerAutor {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+   
+    
+    @media (max-width: 600px) {
+    
+        #autor {
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 15px;
+        }
+    
+        #autor h1 {
+            font-size: 1.5rem;
+        }
+    
+        #autor h2 {
+            font-size: 1.1rem;
+        }
+    
+        #autor h3 {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            padding: 18px;
+        }
+    
+        #autor h3 strong {
+            font-size: 1rem;
+        }
+    
+        #autor img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+    
+        #autor h6 {
+            font-size: 0.75rem;
+        }
+    }
+}
