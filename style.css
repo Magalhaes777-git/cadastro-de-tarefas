@@ -197,6 +197,7 @@ acoes-tarefa {
     color: #218838;
 }
 
+.limpar-tudo,
 .botao-excluir {
     background: #ffe0e0;
     color: #dc3545;
@@ -258,7 +259,7 @@ acoes-tarefa {
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#auntor img:hover,
+#autor img:hover,
 #peloAmorDeDeus img:hover,
 #someDaquiCricaRanhenta img:hover {
     transform: scale(1.03) rotate(-1deg);
@@ -312,6 +313,65 @@ acoes-tarefa {
     border-radius: 15px;
     font-style: italic;
     text-align: left;
+}
+
+
+#limpar-lista {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    padding: 12px 8px;
+    border: 1px solid rgba(255, 90, 105, 0.35);
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #3b171e, #241216);
+    color: #ffb2b8;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    transition: all 0.25s ease;
+}
+
+
+#limpar-lista:hover {
+    background: linear-gradient(135deg, #a82d3b, #711d2a);
+    color: #ffffff;
+    border-color: #ff6475;
+
+    box-shadow:
+        0 6px 20px rgba(255, 65, 85, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+#limpar-lista:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(255, 65, 85, 0.15);
+}
+
+
+#limpar-lista:focus-visible {
+    outline: 2px solid #ff8995;
+    outline-offset: 4px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    #limpar-lista {
+        transition: none;
+    }
 }
 
 
@@ -709,4 +769,33 @@ body.modo-escuro #oSegredoDaVida img {
         max-height: 350px;
         border-radius: 14px;
     }
+}
+
+
+
+
+.update-log-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 9999;
+
+    padding: 12px 22px;
+    border: 1px solid #7546ff;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #211638, #11101b);
+    color: #f5f0ff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.update-log-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
 }

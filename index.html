@@ -12,6 +12,12 @@
 
 <body>
 
+    <button class="update-log-btn" onclick="updateLog()">
+    <span>📋</span>
+    <span>Update Log</span>
+    <span aria-hidden="true">↗</span>
+</button>
+
     <div id="oSegredoDaVida" style="display: none;">
         <h1>VOCÊ esta muito perdido eu sei.</h1>
         <h2>por isso, aqui o segredo da vida, </h2>
@@ -36,7 +42,7 @@
             deve ter passado menos de 5 minutos falando, e não passou nem perto da profissionalidade que o professor de TI. <br>
             <strong>Hobbyes:</strong><br>
             Jogar Videogames: devo passar umas 8 horas somente jogando qualquer coisa. <br>
-            Lutar: já lutei Muay Thay, mais o horario está terrivel, de qualquer forma, agora estou no jiu jitso, mas, devo criar outro hobbye sobre isso. <br>
+            Lutar: já lutei Muay Thay, mais o horario está terrivel, de qualquer forma, agora estou no jiu jitsu, mas, devo criar outro hobby sobre isso. <br>
             Matar aula de Jiu: eu falto muito, toda quinta eu arranjo uma desculpa. <br>
             <strong>Franquias de jogos favoritas</strong> <br>
             The Legend Of Zelda: o meu favorito mesmo fica entre o wind waker ou o ocaria of time, mas, o ocarina eu sei quebrar o jogo de tantas maneiras, que eu chego a 
@@ -58,7 +64,7 @@
     </div>
     <div id="someDaquiCricaRanhenta" style="display: none;">
 
-        <h1>AAhhhh some daqui sua crainça catarrenta, <br>
+        <h1>AAhhhh some daqui sua criança catarrenta, <br>
          Aqui para você</h1>
          <img src="Design-sem-nome-1-1.webp" alt="">
             <h2>agora fique com um poema do nosso querido Galo Cego:</h2>
@@ -71,7 +77,7 @@
                 Se cria vergonha na sua cara !
                 se toma um decumento !
             Se cria vergonha na sua cara e vai se procurar trabalhar !"</h3>
-            <h1>E fique com suas novas terefas apartir de agora:</h1>
+            <h1>E fique com suas novas terefas a partir de agora:</h1>
     </div>
 
     <div id="paginaInicial">
@@ -86,6 +92,9 @@
             <input type="text" id="campo-tarefa" placeholder="o que tu vai fazer o hoje meu lindo?..." maxlength="40">
             <button class="botao-principal" id="botao-adicionar">
                 <i class="fa-solid fa-plus"></i> adicionar
+            </button>
+            <button class="limpar-Lista" id="limpar-lista">
+                Limpar Tudo
             </button>
         </div>
         <ul class="lista-tarefa" id="lista-tarefa">

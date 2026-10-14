@@ -3,6 +3,7 @@ const botaoAdicionar = document.getElementById("botao-adicionar");
 const listaTarefas = document.getElementById("lista-tarefa");
 const contadorTarefas = document.getElementById("contador-tarefas");
 const botaoTema = document.getElementById("botao-alternar-tema");
+const limparTudo = document.getElementById("limpar-lista")
 
 var decidaSe = 0;
 
@@ -10,8 +11,18 @@ let tarefas = [];
 
 const DADOS_SALVOS = "tarefas_salvas_aqui";
 
+function updateLog() {
+    alert(`Update Log:
+- Toad button Easter egg
+- 67 and Farmer Aura Easter egg
+- "Saber o segredo da vida" Easter egg
+- Developer information can be accessed with the "saber sobre o autor" task
+- Site information can now be saved directly in the browser
+- update log button
 
-
+não sei por que estou escrevendo em inglês, so me pareceu interessante de qualquer forma.
+talvez futuramente criarei uma função para quem não entendeu o que está escrito.`);
+}
 
 function salvarDados() {
     const tarefasTexto = JSON.stringify(tarefas);
@@ -151,6 +162,16 @@ function mostrarTarefas() {
 
             mostrarTarefas();
         });
+
+        limparTudo.addEventListener("click", function() {
+            if(confirm("deseja apagar todas as suas tarefas?")){
+                tarefa = [];
+                tarefas = [];
+                salvarDados();
+                mostrarTarefas();
+
+            }
+        })
 
 
         
